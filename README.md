@@ -66,17 +66,24 @@ mvn spring-boot:run
 ```
 
 
-📂 Folder Structure
-bash
-Copy
-Edit
-src/
-├── main/
-│   ├── java/com/example/bootstrapping/
-│   │   ├── controller/
-│   │   ├── model/
-│   │   ├── repository/
-│   │   └── security/
-│   └── resources/
-│       └── application.properties
-└── test/
+### 📂 Project Folder Structure
+
+```
+cloud-native-user-api/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/bootstrapping/
+│   │   │       ├── controller/          # REST controllers
+│   │   │       ├── model/               # Entity models (User.java)
+│   │   │       ├── repository/          # Spring Data JPA repositories
+│   │   │       └── security/            # Security configuration (Basic Auth)
+│   │   └── resources/
+│   │       ├── application.properties   # DB config, JPA, server settings
+│   │       └── ...
+│   └── test/                            # Test cases (unit/integration)
+│
+├── pom.xml                              # Maven configuration
+├── README.md                            # Project documentation
+└── ...
+```
